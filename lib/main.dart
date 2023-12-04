@@ -28,14 +28,12 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// Importe as telas criadas
-
 class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Flutter Back4App Demo'),
+        title: const Text('Flutter Back4App Demo'),
       ),
       body: Center(
         child: Column(
@@ -48,19 +46,17 @@ class MyHomePage extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => AddPersonScreen()),
                 );
               },
-              child: Text('Adicionar Pessoa'),
+              child: const Text('Adicionar Pessoa'),
             ),
             ElevatedButton(
               onPressed: () {
-                // Recupere a lista de pessoas do Back4App
-                // Exemplo: var people = await ParseObject('Person').getAll();
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                       builder: (context) => PersonListScreen(people: [])),
                 );
               },
-              child: Text('Lista de Pessoas'),
+              child: const Text('Lista de Pessoas'),
             ),
           ],
         ),
